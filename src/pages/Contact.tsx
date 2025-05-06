@@ -27,21 +27,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaMapMarkerAlt className="text-primary text-xl" />,
       title: "Endereço",
       info: "Rua João Bonifácio Correa, 1553 - São Francisco do Sul, SC, 89240-000",
     },
     {
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaPhone className="text-primary text-xl" />,
       title: "Telefone",
       info: "+55 (47) 99293-4942",
     },
     {
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaEnvelope className="text-primary text-xl" />,
       title: "E-mail",
       info: "zenith8.contato@gmail.com",
     },
     {
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaClock className="text-primary text-xl" />,
       title: "Horário de Atendimento",
       info: "Segunda à Sexta, 9h às 18h",
@@ -73,6 +77,7 @@ const Contact = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-[#25D366] text-white py-4 px-8 rounded-lg font-bold text-lg flex items-center mx-auto"
             >
+              {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
               <FaWhatsapp className="mr-3 text-2xl" />
               Fale Conosco pelo WhatsApp
             </motion.button>
@@ -117,6 +122,7 @@ const Contact = () => {
                     whileTap={{ scale: 0.95 }}
                     className="bg-[#25D366] text-white py-3 px-6 rounded-lg font-bold flex items-center"
                   >
+                    {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                     <FaWhatsapp className="mr-2 text-xl" />
                     Iniciar Conversa no WhatsApp
                   </motion.button>
@@ -140,6 +146,7 @@ const Contact = () => {
                     className="bg-gray-100 hover:bg-primary hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
                     aria-label="Instagram"
                   >
+                    {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                     <FaInstagram className="text-xl" />
                   </a>
                   <a
@@ -149,6 +156,7 @@ const Contact = () => {
                     className="bg-gray-100 hover:bg-primary hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
                     aria-label="Facebook"
                   >
+                    {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                     <FaFacebook className="text-xl" />
                   </a>
                   <a
@@ -158,6 +166,7 @@ const Contact = () => {
                     className="bg-gray-100 hover:bg-primary hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
                     aria-label="Twitter"
                   >
+                    {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                     <FaTwitter className="text-xl" />
                   </a>
                   <a
@@ -167,6 +176,7 @@ const Contact = () => {
                     className="bg-gray-100 hover:bg-primary hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
                     aria-label="LinkedIn"
                   >
+                    {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                     <FaLinkedin className="text-xl" />
                   </a>
                 </div>

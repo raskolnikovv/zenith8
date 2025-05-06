@@ -13,6 +13,7 @@ const About = () => {
   const values = [
     {
       id: 1,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaLightbulb className="text-4xl text-primary mb-4" />,
       title: "Inovação",
       description:
@@ -20,6 +21,7 @@ const About = () => {
     },
     {
       id: 2,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaUsers className="text-4xl text-primary mb-4" />,
       title: "Colaboração",
       description:
@@ -27,6 +29,7 @@ const About = () => {
     },
     {
       id: 3,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaCog className="text-4xl text-primary mb-4" />,
       title: "Excelência",
       description:
@@ -34,6 +37,7 @@ const About = () => {
     },
     {
       id: 4,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaRocket className="text-4xl text-primary mb-4" />,
       title: "Resultados",
       description:
@@ -105,7 +109,7 @@ const About = () => {
                 <p>Mas em 2025, sentimos que era hora de evoluir.</p>
                 <p>
                   Assim surgiu a Zenith8 — mais do que uma mudança de nome, um
-                  novo posicionamento. O “8” representa infinitas
+                  novo posicionamento. O "8" representa infinitas
                   possibilidades, inovação contínua e a ambição de ir além dos
                   limites. Mantivemos o DNA criativo e a paixão por tecnologia,
                   mas ampliamos nossa visão: queremos impactar negócios, cidades

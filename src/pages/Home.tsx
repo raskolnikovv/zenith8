@@ -9,9 +9,7 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// @ts-ignore
 import logo1 from "../assets/1.png";
-// @ts-ignore
 import logo3 from "../assets/3.png";
 
 const Home = () => {
@@ -39,6 +37,7 @@ const Home = () => {
   const services = [
     {
       id: 1,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaCode className="text-4xl text-primary mb-4" />,
       title: "Desenvolvimento Web",
       description:
@@ -46,6 +45,7 @@ const Home = () => {
     },
     {
       id: 2,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaMobile className="text-4xl text-primary mb-4" />,
       title: "Desenvolvimento Mobile",
       description:
@@ -53,6 +53,7 @@ const Home = () => {
     },
     {
       id: 3,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaPalette className="text-4xl text-primary mb-4" />,
       title: "Design UI/UX",
       description:
@@ -60,6 +61,7 @@ const Home = () => {
     },
     {
       id: 4,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaBrain className="text-4xl text-primary mb-4" />,
       title: "Soluções com IA",
       description:
@@ -67,6 +69,7 @@ const Home = () => {
     },
     {
       id: 5,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaLaptopCode className="text-4xl text-primary mb-4" />,
       title: "Consultoria Tecnológica",
       description:
@@ -241,6 +244,7 @@ const Home = () => {
                   <div className="w-full h-full flex flex-col justify-between p-8 relative">
                     <div className="flex items-center mb-6">
                       <div className="bg-primary/20 p-3 rounded-full mr-4">
+                        {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                         <FaCode className="text-primary text-2xl" />
                       </div>
                       <div>
@@ -288,6 +292,7 @@ const Home = () => {
                     }}
                   >
                     <div className="text-primary">
+                      {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                       <FaLaptopCode className="text-3xl" />
                     </div>
                   </motion.div>

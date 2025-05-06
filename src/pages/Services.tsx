@@ -20,6 +20,7 @@ const Services = () => {
   const services = [
     {
       id: 1,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaCode className="text-5xl text-primary mb-6" />,
       title: "Desenvolvimento Web",
       description:
@@ -34,6 +35,7 @@ const Services = () => {
     },
     {
       id: 2,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaMobile className="text-5xl text-primary mb-6" />,
       title: "Desenvolvimento Mobile",
       description:
@@ -48,6 +50,7 @@ const Services = () => {
     },
     {
       id: 3,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaPalette className="text-5xl text-primary mb-6" />,
       title: "Design UI/UX",
       description:
@@ -62,6 +65,7 @@ const Services = () => {
     },
     {
       id: 4,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaBrain className="text-5xl text-primary mb-6" />,
       title: "Soluções com IA",
       description:
@@ -76,6 +80,7 @@ const Services = () => {
     },
     {
       id: 5,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaLaptopCode className="text-5xl text-primary mb-6" />,
       title: "Consultoria Tecnológica",
       description:
@@ -90,6 +95,7 @@ const Services = () => {
     },
     {
       id: 6,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaServer className="text-5xl text-primary mb-6" />,
       title: "Infraestrutura e DevOps",
       description:
@@ -104,6 +110,7 @@ const Services = () => {
     },
     {
       id: 7,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaChartLine className="text-5xl text-primary mb-6" />,
       title: "Marketing Digital",
       description:
@@ -118,6 +125,7 @@ const Services = () => {
     },
     {
       id: 8,
+      // @ts-expect-error - className não existe no tipo IconBaseProps
       icon: <FaShieldAlt className="text-5xl text-primary mb-6" />,
       title: "Segurança Digital",
       description:

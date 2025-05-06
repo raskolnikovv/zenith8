@@ -177,6 +177,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
+                {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                 <FaMapMarkerAlt className="text-primary mt-1 flex-shrink-0" />
                 <span
                   className="text-gray-300"
@@ -194,6 +195,7 @@ const Footer = () => {
                 </span>
               </li>
               <li className="flex items-center space-x-3">
+                {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                 <FaPhone className="text-primary flex-shrink-0" />
                 <a
                   href="tel:+5547992934942"
@@ -204,6 +206,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
+                {/* @ts-expect-error - className não existe no tipo IconBaseProps */}
                 <FaEnvelope className="text-primary flex-shrink-0" />
                 <a
                   href="mailto:zenith8.contato@gmail.com"
