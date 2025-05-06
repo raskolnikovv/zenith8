@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --no-open",
-    "build": "tsc -b && vite build --no-open",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "analyze": "vite build --mode analyze"

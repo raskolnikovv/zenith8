@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SEOHelmet from "./components/SEOHelmet";
+// Remover temporariamente a importação do ErrorBoundary
+// import ErrorBoundary from "./components/ErrorBoundary";
 import { trackPageView } from "./utils/analytics";
 import { captureError } from "./utils/error-monitoring";
 
@@ -121,62 +123,25 @@ const AppSEO = () => {
   );
 };
 
-// Componente ErrorBoundary básico para capturar erros de renderização
-class ErrorBoundary extends React.Component<{ children: React.ReactNode }> {
-  state = { hasError: false };
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Reporta erro para o Sentry
-    captureError(error, { errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="container-custom py-20 text-center">
-          <h2 className="text-2xl font-bold mb-4">Algo deu errado</h2>
-          <p className="mb-4">
-            Desculpe pelo inconveniente. Tente recarregar a página.
-          </p>
-          <button
-            onClick={() => window.location.reload()}
-            className="btn-primary"
-          >
-            Recarregar
-          </button>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
 function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <AppSEO />
-        <div className="min-h-screen flex flex-col">
-          <ScrollToTop />
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/sobre" element={<About />} />
-              <Route path="/servicos" element={<Services />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contato" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <Router>
+      <AppSEO />
+      <div className="min-h-screen flex flex-col">
+        <ScrollToTop />
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<About />} />
+            <Route path="/servicos" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contato" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
