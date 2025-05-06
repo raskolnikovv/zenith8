@@ -1,0 +1,6 @@
+# Configuração do robots.txt para Zenith8
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zenith8.com.br/sitemap.xml 
