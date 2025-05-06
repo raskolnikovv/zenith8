@@ -13,7 +13,6 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SEOHelmet from "./components/SEOHelmet";
-// Remover temporariamente a importação do ErrorBoundary
 // import ErrorBoundary from "./components/ErrorBoundary";
 import { trackPageView } from "./utils/analytics";
 import { captureError } from "./utils/error-monitoring";
